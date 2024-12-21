@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    padding: 15px 5%;
+}
+
+@media (max-width: 793px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 3rem;
+    }
+}
+
+.cont {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-logo {
+    width: 10rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    justify-self: flex-start;
+    border-left: 3px solid white;
+    padding-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.submit-a-request {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: white 0.5px solid;
+    border-radius: 7px;
+}
+
+.sign-in {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: #4C5FD5;
+    color: white;
+    border: #4C5FD5 0.5px solid;
+    border-radius: 7px;
+}
+
+/* Styling for heading part */
+
+.heading {
+    height: 40vh;
+    animation-name: animate;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes animate {
+    0%{
+      background: #9ba3db;
+    }
+    50%{
+      background: #b37182;
+    }
+    100%{
+      background: #dadbf1;
+    }
+  }
+
+  .heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  } 
+
+  .heading-container h1 {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+
+  .heading-container span {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+
+  form input, form button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: rgb(10, 8, 8);
+    border: white 0.5px solid;
+    border-radius: 7px;
+    color: white;
+  }
+
+  form button {
+    background-color: #4C5FD5;
+    font-weight: 600;
+    box-shadow: 4px 3px;
+    border: #4C5FD5;
+  }
+  
+/* Added services styling */
+
+.services {
+    margin: 8rem 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 5rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media (max-width: 793px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        /* grid-template-rows: repeat(3,1fr); */
+        gap: 5rem;
+        width: 80%;
+        margin: 0 auto; 
+    }
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.grid-content {
+    width: 70%;
+    line-height: 1.5rem;
+}
+
+.grid-content > h2 {
+    margin-bottom: 25px;
+    line-height: 2rem;
+}
+
+.grid-content  a {
+    color: rgb(156, 95, 106);
+}
+
+.icons {
+    font-size: 4rem;
+    color: #4C5FD5;
+}
+
+
+/* Added footer styling */
+
+footer {
+    background-color: #000000;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr) 2fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+
+.footer-container h3, .footer-container img {
+    margin-bottom: 20px;
+}
+
+.footer-container p {
+    font-weight: lighter;
+    font-size: 1rem;
+    font-style: italic;
+    margin: 10px 0;
+}
+
+.company {
+    grid-row: span 2;
+}
+
+.company h4 {
+    margin: 50px 0 10px 0;
+}
+  
+.copyright {
+    grid-area: 2/5/3/6;
+    padding-left: 4rem;
+}
+
+@media (max-width: 793px) {
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .copyright {
+        padding: 0;
+    }
+
+    .footer-container h3, .footer-container img {
+        margin-top: 40px;
+    }
+}
